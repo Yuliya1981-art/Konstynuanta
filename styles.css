@@ -1,0 +1,393 @@
+/* Основні стилі */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #FFCC33;
+    color: #000080;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-content {
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #000080;
+}
+
+header p {
+    font-size: 1.5em;
+    color: #000080;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: hsl(240, 100%, 100%);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 0;
+    display: block;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 80px; /* щоб уникнути накладання на хедер */
+}
+
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.column {
+    width: 48%;
+    text-align: left;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000080;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.button {
+    display: inline-block;
+    background-color: #FFCC33;
+    color: #000080;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.button-large {
+    display: block;
+    background-color: #FFCC33;
+    color: #000080;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    margin: 20px 0;
+    font-size: 1.5em;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-large:hover {
+    background-color: #FFCC33;
+    transform: scale(1.05);
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-row .button {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.button i {
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .two-columns {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    .button {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+
+    .button-large {
+        padding: 15px;
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .button {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+
+    .button-large {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .card {
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+
+    .team-members {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.agenda h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000080;
+}
+
+.custom-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.custom-list li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: #000080;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #FFCC33;
+    color: #000080;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: calc(33.33% - 40px);
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.card img {
+    max-width: 50px;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h4 {
+    margin: 10px 0;
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+.card i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #000080;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 40px);
+    }
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .team-members {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .team-members {
+        grid-template-columns: 1fr;
+    }
+}
+footer {
+    
+   
+    background: #FFCC33;
+        
+       
+    color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+    footer h3 {
+        
+       
+    margin-top: 0;
+        
+       
+    font-size: 1.5rem;
+    }
+    
+    footer p {
+        
+       
+    margin: 5px 0;
+    }
+    
+    footer ul {
+        
+        list-style: none;
+        padding: 0;   
+    margin: 10px 0 0 0;
+    }
+    
+    footer ul li {
+    display: inline;  
+    margin: 0 10px;
+    }
+    
+    footer ul li a {
+        color: #fff;
+    text-decoration: none;
+        font-size: 1.2rem;
+    }
+    
+    footer ul li a:hover {  
+    text-decoration: underline;
+    }
+
+    /* Иконки социальных сетей */
+    footer ul li a i {
+   
+       
+    margin-right: 5px;
+    }
+    
+    .white-text {
+        color: white;
+    }
+    .blue-text {
+        color:#000080   
+    }
